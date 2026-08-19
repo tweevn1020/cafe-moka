@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Кафе MOKA</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f2eb;
+            color: #2b211b;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(247, 242, 235, 0.95);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #2b211b;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #9b6747;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #9b6747;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #6d5b4e;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #9b6747;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #754b32;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
+        }
+
+        .about {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            font-size: 19px;
+            line-height: 1.8;
+            color: #6d5b4e;
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-7px);
+        }
+
+        .item h3 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            color: #76665b;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #9b6747;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #6d5b4e;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #2b211b;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .menu {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MOKA</div>
+
+    <nav>
+        <a href="#about">О нас</a>
+        <a href="#menu">Меню</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Добро пожаловать в <span>MOKA</span></h1>
+
+    <p>
+        Уютное кафе с ароматным кофе,
+
+
+вкусными завтраками и домашней атмосферой.
+    </p>
+
+    <a href="#menu" class="button">
+        Посмотреть меню
+    </a>
+</section>
+
+<section id="about">
+    <h2 class="title">О нашем кафе</h2>
+
+    <div class="about">
+        <p>
+            MOKA — место, где можно начать день с чашки
+            хорошего кофе, встретиться с друзьями или просто
+            отдохнуть после рабочего дня.
+        </p>
+    </div>
+</section>
+
+<section id="menu">
+    <h2 class="title">Наше меню</h2>
+
+    <div class="menu">
+
+        <div class="item">
+            <h3>Капучино</h3>
+            <p>Эспрессо, молоко и нежная молочная пенка.</p>
+            <div class="price">250 ₽</div>
+        </div>
+
+        <div class="item">
+            <h3>Чизкейк</h3>
+            <p>Нежный сливочный чизкейк с ягодным соусом.</p>
+            <div class="price">350 ₽</div>
+        </div>
+
+        <div class="item">
+            <h3>Паста</h3>
+            <p>Паста с курицей в сливочном соусе.</p>
+            <div class="price">490 ₽</div>
+        </div>
+
+        <div class="item">
+            <h3>Круассан</h3>
+            <p>Свежий хрустящий круассан с начинкой.</p>
+            <div class="price">220 ₽</div>
+        </div>
+
+        <div class="item">
+            <h3>Латте</h3>
+            <p>Нежный кофе с большим количеством молока.</p>
+            <div class="price">270 ₽</div>
+        </div>
+
+        <div class="item">
+            <h3>Завтрак</h3>
+            <p>Яйца, тосты, авокадо и свежие овощи.</p>
+            <div class="price">450 ₽</div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="title">Мы ждём вас</h2>
+
+    <div class="contact">
+        <p>
+            📍 ул. Центральная, 15<
+            🕐 Ежедневно: 08:00–22:00
+        </p>
+
+        <a href="tel:+79999999999" class="button">
+            Позвонить нам
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 MOKA — уютное кафе
+</footer>
+
+</body>
+</html>
